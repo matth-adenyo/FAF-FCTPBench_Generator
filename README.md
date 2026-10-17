@@ -147,4 +147,4 @@ Checkpoint files remain under `results/checkpoints/` for local restart capabilit
 - `docs/data_dictionary.md` — canonical table, metadata, validation, and result fields.
 
 
-Benchmark instances are archived on Zenodo:
+Benchmark instances are archived on Zenodo: https://doi.org/10.5281/zenodo.23425977
