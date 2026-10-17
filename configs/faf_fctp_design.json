@@ -1,0 +1,101 @@
+{
+  "benchmark_name": "FAF-FCTPBench",
+  "faf_source": {
+    "archive_name": "FAF5.7.1_HiLoForecasts.zip",
+    "sha256": "3dcaff4276b330c942e3f9282283963e6476ad84693d4a966b822c9bf2f5467c",
+    "forecast_year": 2030,
+    "mode_code": "1",
+    "trade_type_code": "1"
+  },
+  "design": {
+    "replicates_per_scale_product_cell": 2,
+    "base_seed": 20250921,
+    "tracks": [
+      "deterministic",
+      "scenario"
+    ],
+    "scale_dimensions": {
+      "small": [
+        12,
+        12
+      ],
+      "medium": [
+        30,
+        40
+      ],
+      "large": [
+        70,
+        90
+      ],
+      "very_large": [
+        120,
+        132
+      ]
+    },
+    "product_counts": {
+      "single": 1,
+      "five": 5,
+      "twenty": 20
+    }
+  },
+  "scenario_probabilities": {
+    "low": 0.25,
+    "base": 0.5,
+    "high": 0.25
+  },
+  "factors": {
+    "network_support": {
+      "restricted": 0.0,
+      "reference": 0.5,
+      "expanded": 1.0
+    },
+    "cost_variability": {
+      "low": 0.0,
+      "reference": 0.1,
+      "high": 0.3
+    },
+    "capacity_tightness": {
+      "loose": 2.0,
+      "reference": 1.4,
+      "tight": 1.05
+    },
+    "demand_concentration": {
+      "diffuse": 0.75,
+      "reference": 1.0,
+      "concentrated": 1.5
+    },
+    "fixed_charge_intensity": {
+      "low": 0.1,
+      "reference": 1.0,
+      "high": 5.0
+    },
+    "uncertainty_amplitude": {
+      "low": 0.35,
+      "reference": 1.0,
+      "high": 1.75
+    }
+  },
+  "cost_calibration": {
+    "variable_cost_usd_per_kton_mile": 120.0,
+    "commodity_variability_sigma": 0.05,
+    "fixed_charge_distance_exponent": 0.5,
+    "fixed_charge_random_sigma": 0.15
+  },
+  "storage": {
+    "format": "parquet",
+    "compression": "zstd",
+    "compression_level": 9,
+    "dictionary_encoding": true
+  },
+  "solver_protocol": {
+    "relaxation_seconds": 10.0,
+    "screening_milp_seconds": 60.0,
+    "reference_milp_seconds": 200.0,
+    "extended_milp_seconds": 400.0,
+    "mip_relative_gap": 0.0001
+  },
+  "validation": {
+    "independent_shared_capacity_check": "reference_only",
+    "independent_capacity_time_limit_seconds": 60.0
+  }
+}

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faf-fctpbench"
+description = "Reproducible FAF-grounded benchmark-generation framework for deterministic and scenario-based fixed-charge transportation problems."
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+dependencies = [
+  "numpy==2.2.6",
+  "pandas==2.3.1",
+  "scipy==1.15.3",
+  "pyarrow==25.0.1",
+]
+
+[project.scripts]
+faf-fctp = "faf_fctp.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["faf_fctp*"]
+
+[tool.setuptools.package-data]
+faf_fctp = ["resources/*.parquet"]
+
+[tool.setuptools.dynamic]
+version = {attr = "faf_fctp.__version__"}
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
