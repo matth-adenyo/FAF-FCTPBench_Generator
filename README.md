@@ -1,6 +1,6 @@
 # FAF-FCTPBench Generator
 
-FAF-FCTPBench Generator is a reproducible benchmark-generation framework for deterministic and scenario-based fixed-charge transportation problems (FCTPs). It preserves freight-demand structure derived from the U.S. Freight Analysis Framework (FAF5.7.1) while controlling optimization-relevant structural factors through matched comparisons.
+FAF-FCTPBench Generator is a reproducible benchmark-generation framework for deterministic and scenario-based fixed-charge transportation problems (FCTPs). It preserves freight-demand structure derived from the U.S. Freight Analysis Framework (FAF5.7.1) while controlling optimisation-relevant structural factors through matched comparisons.
 
 The central experimental principle is **matched control**. Geography, commodities, empirical support, and primitive random draws are frozen within an empirical skeleton. Every non-reference treatment changes one declared factor relative to the same-skeleton, same-track reference instance.
 
@@ -50,7 +50,7 @@ The standard pipeline uses fresh solves at three MILP horizons:
 
 | Stage | Limit | Purpose |
 |---|---:|---|
-| LP relaxation | 10 s | initial root/relaxation evidence for standardized screening |
+| LP relaxation | 10 s | initial root/relaxation evidence for standardised screening |
 | LP follow-up | 30 s | fresh solve only when the 10 s LP was not certified optimal |
 | Screening MILP | 60 s | common computational-hardness observation horizon |
 | Reference MILP | 200 s | fresh solve for valid instances unresolved at 60 s |
@@ -61,7 +61,7 @@ The 200-second and 400-second stages are fresh solves from time zero; they are n
 
 ## Resumable End-to-End Pipeline
 
-`run-pipeline` is the primary workflow. It performs source verification, catalogue generation, instance materialization, individual validation, matched-family validation, 10-second LP/60-second MILP screening, a targeted fresh 30-second LP follow-up only for LPs not certified at 10 seconds, 200-second reference MILP solves, 400-second extended MILP solves, matched characterization, horizon-persistence reporting, and final compact packaging.
+`run-pipeline` is the primary workflow. It performs source verification, catalogue generation, instance materialisation, individual validation, matched-family validation, 10-second LP/60-second MILP screening, a targeted fresh 30-second LP follow-up only for LPs not certified at 10 seconds, 200-second reference MILP solves, 400-second extended MILP solves, matched characterisation, horizon-persistence reporting, and final compact packaging.
 
 Every expensive unit is checkpointed. Persistent progress is written to:
 
