@@ -1,0 +1,26 @@
+
+cff-version: 1.2.0
+
+message: "If you use this software, please cite it as below."
+
+title: "FAF-FCTPBench Generator"
+
+type: software
+version: "1.0.0"
+date-released: "2026-10-17"
+license: MIT
+
+authors:
+  - family-names: "Adenyo"
+    given-names: "Matthew"
+    orcid: "https://orcid.org/0009-0007-5712-9496"
+
+repository-code: "https://github.com/matth-adenyo/FAF-FCTPBench_Generator"
+
+keywords:
+  - fixed-charge transportation problem
+  - freight transportation
+  - benchmark generation
+  - stochastic optimisation
+  - reproducible computational experiments
+  - Freight Analysis Framework
