@@ -23,7 +23,7 @@ The benchmark therefore preserves **FAF-derived U.S. domestic truck freight-dema
 
 ## Default Matched Design
 
-The catalogue contains 24 empirical skeletons. Four scale classes, three product-count regimes, and two empirical replicates per scale-product cell. Each skeleton contributes 11 deterministic variants and 13 scenario variants, giving **576 instances** in total (264 deterministic and 312 scenario-based).
+The catalogue contains 24 empirical skeletons: four scale classes, three product-count regimes, and two empirical replicates per scale-product cell. Each skeleton contributes 11 deterministic variants and 13 scenario variants, giving **576 instances** in total (264 deterministic and 312 scenario-based).
 
 The controlled factors are network support, variable-cost variability, capacity tightness, demand concentration, fixed-charge intensity, and scenario uncertainty amplitude. Uncertainty amplitude applies only to the scenario track.
 
